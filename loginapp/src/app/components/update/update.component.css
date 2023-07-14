@@ -1,0 +1,188 @@
+.success-snackbar {
+
+    background-color: green;
+
+    color: white;
+
+    font-weight: bold;
+
+  }
+
+
+
+
+  .card-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    /* height: 100vh; */
+
+    margin-top: 10px;
+
+  }
+
+ 
+
+  .card {
+
+    width: 800px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  }
+
+ 
+
+  h2 {
+
+    margin-bottom: 10px;
+
+  }
+
+ 
+
+  .button {
+
+    margin-bottom: 15px;
+
+    background-color: rgb(165, 122, 122);
+
+    width: 30%;
+
+    /* color: gray; */
+
+    height: 35px;
+
+    border-radius: 6px;
+
+   
+
+  }
+
+ 
+
+  .department-table {
+
+    width: 100%;
+
+  }
+
+ 
+
+  .department-table th,
+
+  .department-table td {
+
+    padding: 8px;
+
+    text-align: center;
+
+  }
+
+ 
+
+  .department-table th {
+
+    background-color: #f2f2f2;
+
+    font-weight: bold;
+
+  }
+
+ 
+
+  .department-table tbody tr:nth-child(even) {
+
+    background-color: #f2f2f2;
+
+  }
+
+
+
+
+
+  body {
+
+
+
+
+    background-image: url("src/assets/bg10.jpg");
+
+ 
+
+    background-size: cover;
+
+ 
+
+    background-position: center;
+
+ 
+
+    background-attachment: fixed;
+
+ 
+
+    background-repeat: no-repeat;
+
+ 
+
+  }
+
+  .title[_ngcontent-ng-c1981113349] {
+
+
+
+
+    text-align: center;
+
+ 
+
+    color: #333;
+
+ 
+
+    font-size: xx-large;
+
+ 
+
+    font-family: inherit;
+
+ 
+
+  }
+
+  .mat-mdc-raised-button.mat-primary {
+
+    --mdc-protected-button-container-color: #494949bd;
+
+    --mdc-protected-button-label-text-color: #fff;
+
+}
+h1 {
+  font-size: 41px;
+  font-weight: 500;
+  line-height: 0px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+  margin-left: 422px;
+  padding-top: 105px;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
+  padding-top: 6px;
+  padding-bottom: 0px;
+  margin-left: 116px;
+}
