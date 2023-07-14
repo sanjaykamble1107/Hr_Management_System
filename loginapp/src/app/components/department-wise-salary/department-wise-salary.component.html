@@ -1,0 +1,33 @@
+<body>
+  <div class="card-container">
+    <div class="card">
+      <h2 >Department wise Salary</h2>
+      <button class="button" (click)="fetchDepartmentDetails()">Get Details</button>
+      <table class="department-table" style="background-color: white;">
+        <thead>
+          <tr>
+            <th>Department No</th>
+
+            <th>Max Salary</th>
+
+            <th>Average Salary</th>
+
+            <th>Min Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let department of departmentList">
+            <td>{{ department.deptNo }}</td>
+
+            <td>{{ department.maxSalary | currency }}</td>
+
+            <td>{{ department.avgSalary | currency }}</td>
+
+            <td>{{ department.minSalary | currency }}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

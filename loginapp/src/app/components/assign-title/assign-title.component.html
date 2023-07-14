@@ -1,0 +1,44 @@
+<body>
+  <div class="container">
+    <h2>Assign Title</h2>
+    <form class="form" (submit)="assignTitle()" #titleForm="ngForm">
+      <mat-form-field class="input-field">
+        <mat-label>Title</mat-label>
+        <mat-select name="title" [(ngModel)]="dto.title" required #titleInput="ngModel">
+          <mat-option value="">Select a title</mat-option>
+          <mat-option value="Engineer">Engineer</mat-option>
+          <mat-option value="Senior Engineer">Senior Engineer</mat-option>
+          <mat-option value="Staff">Staff</mat-option>
+          <mat-option value="Assistant Engineer">Assistant Engineer</mat-option>
+          <mat-option value="Technique Leader">Technique Leader</mat-option>
+          <mat-option value="Manager">Manager</mat-option>
+        </mat-select>
+        <div *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched)" class="error-message">
+          Title is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <mat-label>From Date</mat-label>
+        <input matInput type="date" name="fromDate" [(ngModel)]="dto.fromDate" required #fromDateInput="ngModel">
+        <div *ngIf="fromDateInput.invalid && (fromDateInput.dirty || fromDateInput.touched)" class="error-message">
+          From Date is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <mat-label>To Date</mat-label>
+        <input matInput type="date" name="toDate" [(ngModel)]="dto.toDate" required #toDateInput="ngModel">
+        <div *ngIf="toDateInput.invalid && (toDateInput.dirty || toDateInput.touched)" class="error-message">
+          To Date is required.
+        </div>
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <mat-label>Employee Number</mat-label>
+        <input matInput type="number" name="empNo" [(ngModel)]="dto.empNo" required #empNoInput="ngModel">
+        <div *ngIf="empNoInput.invalid && (empNoInput.dirty || empNoInput.touched)" class="error-message">
+          Employee Number is required.
+        </div>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="titleForm.invalid">Assign Title</button>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,36 @@
+<body>
+  <div class="box">
+    <div class="container">
+      <h1 class="text-center">Login</h1>
+      <div *ngIf="error" class="error">{{ error }}</div>
+      <form (ngSubmit)="onLogin()" [formGroup]="loginForm">
+        <div class="input-field">
+          <input type="text" id="username" name="username" formControlName="username" class="form-control"
+            placeholder="Username" style="background-color:transparent ;" required>
+          <i class='bx bx-user'></i>
+          <div *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched" class="error">
+            Username is required.</div>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" name="password" formControlName="password" class="form-control"
+            placeholder="Password" style="background-color:transparent ;" required>
+          <i class='bx bx-lock-alt'></i>
+          <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="error">
+            Password is required.</div>
+        </div>
+        <div class="input-field">
+          <button type="submit" class="submit">Login</button>
+        </div>
+      </form>
+      <div class="two-col">
+        <div class="one">
+          <input type="checkbox" name="" id="check">
+          <label for="check"> Remember Me</label>
+        </div>
+        <div class="two">
+          <label><a href="/register()">Want to register?</a></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,44 @@
+<body>
+  <div class="col-md-8 offset-md-2">
+    <h1 class="title">Create Employee</h1>
+    <form #userForm="ngForm" class="form" (ngSubmit)="onSubmit(userForm)" style="background-color:#57575724;">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" [(ngModel)]="employee.firstName" required pattern="[a-zA-Z]*">
+        <div *ngIf="userForm.controls['firstName'].invalid && userForm.controls['firstName'].touched">
+          <small class="error-message">First name is required & only alphabets</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" [(ngModel)]="employee.lastName" required pattern="[a-zA-Z]*">
+        <div *ngIf="userForm.controls['lastName'].invalid && userForm.controls['lastName'].touched">
+          <small class="error-message">Last name is required & only alphabets</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Birth Date</label>
+        <input type="date" id="birthDate" name="birthDate" placeholder="Birth Date" [(ngModel)]="employee.birthDate" required>
+        <div *ngIf="userForm.controls['birthDate'].invalid && userForm.controls['birthDate'].touched">
+          <small class="error-message">Birth date is required.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hireDate">Hire Date</label>
+        <input type="date" id="hireDate" name="hireDate" [(ngModel)]="employee.hireDate" required>
+        <div *ngIf="userForm.controls['hireDate'].invalid && userForm.controls['hireDate'].touched">
+          <small class="error-message">Hire date is required.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" name="gender" [(ngModel)]="employee.gender" placeholder="Gender" required pattern="[a-zA-Z]+">
+        <div *ngIf="userForm.controls['gender'].invalid && userForm.controls['gender'].touched">
+          <small class="error-message">Gender is required and should only contain letters.</small>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn" [disabled]="userForm.invalid || userForm.pristine">Submit</button>
+      <button type="button" class="back-btn" (click)="goToEmployeeList()">Back</button>
+    </form>
+  </div>
+</body>

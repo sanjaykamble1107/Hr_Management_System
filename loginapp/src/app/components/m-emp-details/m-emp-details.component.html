@@ -1,0 +1,38 @@
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="employee-list-container">
+        <h1 class="heading">List of Employees who are Managers</h1>
+        <div>
+          <button class="show-employees-button" (click)="showEmployeesTable = true">Show Employees</button>
+        </div>
+
+        <div *ngIf="showEmployeesTable">
+          <table class="employee-table">
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Department Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emp of pagedEmployeeHrms">
+                <td>{{ emp.empNo }}</td>
+                <td>{{ emp.firstName }}</td>
+                <td>{{ emp.lastName }}</td>
+                <td>{{ emp.birthDate }}</td>
+                <td>{{ emp.deptName }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [length]="totalEmployees"
+            (page)="onPageChange($event)">
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

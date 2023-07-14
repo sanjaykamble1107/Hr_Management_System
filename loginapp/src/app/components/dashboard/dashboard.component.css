@@ -1,0 +1,154 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bg-transparent {
+    --bs-bg-opacity: 1;
+    background-color: #4c4b4b63!important;
+}
+.nav-item a{
+  padding: 8px 18px;
+  font-family: Roboto;
+  font-size: 18px;
+ 
+}
+  .container.text-center {
+    margin-top: 50px;
+  }
+  
+  .container.text-center .img-fluid {
+    max-width: 300px;
+  }
+  
+  .welcome-heading {
+    color: rgba(58, 58, 58, 0.836);
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  button.mat-raised-button {
+    transition: background-color 0.3s ease;
+  }
+  
+  button.mat-raised-button:hover {
+    background-color: #e0e0e0;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+.btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  color: #fff;
+}
+.btn-9:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+body{
+  background-image: url("src\assets\bg12.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/* Add this CSS code to your stylesheet */
+/* Add this CSS code to your stylesheet */
+
+nav.responsive-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 10px;
+}
+
+nav.responsive-nav .hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+  cursor: pointer;
+}
+
+nav.responsive-nav .hamburger-icon:before,
+nav.responsive-nav .hamburger-icon:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+}
+
+nav.responsive-nav .hamburger-icon:before {
+  top: -8px;
+}
+
+nav.responsive-nav .hamburger-icon:after {
+  bottom: -8px;
+}
+
+nav.responsive-nav span {
+  margin-right: 10px;
+}
+
+nav.responsive-nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav.responsive-nav button {
+  margin: 5px;
+}
+
+/* Adjust the button styles for responsiveness */
+@media (max-width: 600px) {
+  nav.responsive-nav .nav-links {
+      display: none;
+  }
+}

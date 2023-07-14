@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    font-family: 'poppins' ,sans-serif;
+}
+body{
+    background-image: url("src\assets\bg6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+span{
+    color: rgb(12, 4, 4);
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+header{
+    color: rgb(21, 10, 10);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: rgb(16, 14, 14);
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(242, 237, 237, 0.1);
+    outline: none;
+}
+i{
+    position: relative;
+    top: -29px;
+    left: 280px;
+    color: rgb(20, 13, 13);
+}
+::-webkit-input-placeholder{
+    color: rgb(31, 17, 17);
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: black;
+    background: rgb(28 26 26 / 29%);
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(20, 10, 10);
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+}
+label a{
+    text-decoration: none;
+    color: rgb(13, 7, 7);
+}
+.error {
+    color: rgba(255, 25, 25, 0.644);
+    margin-top: 5px;
+    font-size: 14px;
+  }

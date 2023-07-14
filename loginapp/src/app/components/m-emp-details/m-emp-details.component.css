@@ -1,0 +1,216 @@
+.employee-list-container {
+
+  background-color: #f8f8f8;
+
+  padding: 20px;
+
+  border-radius: 5px;
+
+  margin-bottom: 20px;
+
+  background: transparent;
+
+}
+
+
+
+.employee-list-container h1 {
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.show-employees-button {
+
+  background-color: #4d4455;
+
+  color: #fff;
+
+  padding: 8px 16px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+
+
+.employee-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 10px;
+
+}
+
+
+
+.employee-table th,
+
+.employee-table td {
+
+  padding: 8px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+
+
+.employee-table th {
+
+  background-color: #f2f2f2;
+
+  font-weight: bold;
+
+}
+
+
+
+.employee-table tr:nth-child(even) {
+
+  background-color: #f8f8f8;
+
+}
+
+
+
+.employee-table tr:hover {
+
+  background-color: #e6e6e6;
+
+}
+
+
+
+
+/* new styling */
+
+.card-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  /* height: 100vh; */
+
+  margin-top: 10px;
+
+}
+
+
+
+.card {
+
+  width: 800px;
+
+  padding: 20px;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  background: transparent;
+
+}
+
+
+
+h2 {
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.button {
+
+  margin-bottom: 15px;
+
+  background-color: rgb(165, 122, 122);
+
+  width: 30%;
+
+  /* color: gray; */
+
+  height: 35px;
+
+  border-radius: 6px;
+
+ 
+
+}
+
+
+
+.department-table {
+
+  width: 100%;
+
+}
+
+
+
+.department-table th,
+
+.department-table td {
+
+  padding: 8px;
+
+  text-align: center;
+
+}
+
+
+
+.department-table th {
+
+  background-color: #f2f2f2;
+
+  font-weight: bold;
+
+}
+
+
+
+.department-table tbody tr:nth-child(even) {
+
+  background-color: #f2f2f2;
+
+}
+
+
+
+
+body {
+
+  background-image: url("src/assets/bg11.jpg");
+
+  /* background-color: rgba(0, 0, 0, 0.5); Adjust the alpha value (0.5 in this example) to control the transparency */
+
+  background-blend-mode: multiply; /* This blending mode helps to blend the image and the background color */
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  background-position: center;
+
+
+}
