@@ -1,0 +1,98 @@
+.card-container {
+
+    width: 600px;
+
+    padding: 20px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    margin-left: 30%;
+
+  }
+
+ 
+
+  .designations-button {
+
+    display: block;
+
+    width: 40%;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    background-color: #3a4046;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+  }
+
+ 
+
+  .designations-button:hover {
+
+    background-color: #3d454e;
+
+  }
+
+ 
+
+  .designation-list {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style-type: none;
+
+  }
+
+ 
+
+  .designation-list li {
+
+    margin-bottom: 5px;
+
+  }
+
+ 
+
+
+
+
+  body {
+
+    background-image: url("src/assets/bg11.jpg");
+
+    /* background-color: rgba(0, 0, 0, 0.5); Adjust the alpha value (0.5 in this example) to control the transparency */
+
+    background-blend-mode: multiply; /* This blending mode helps to blend the image and the background color */
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+
+  }
+  h1 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 32px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+    text-align: center;
+}

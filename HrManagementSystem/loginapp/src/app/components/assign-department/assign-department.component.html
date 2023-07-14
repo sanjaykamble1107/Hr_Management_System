@@ -1,0 +1,50 @@
+<body>
+  <div class="container container-sm">
+  <h1 class="title">Assign Department to Employee</h1>
+
+  <form class="form" (submit)="saveDeptEmp()" #deptEmpForm="ngForm">
+    <div class="form-field">
+      <label for="employeeName">Employee number:</label>
+      <input type="text" id="employeeName" [(ngModel)]="empNo" name="empNo" required #empNoInput="ngModel">
+      <div *ngIf="empNoInput.invalid && (empNoInput.dirty || empNoInput.touched)" class="error-message">
+        Employee number is required.
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="department">Department:</label>
+      <select id="department" [(ngModel)]="department" name="department" required #departmentSelect="ngModel">
+        <option value="">Select a department</option>
+        <option value="d001">d001</option>
+        <option value="d002">d002</option>
+        <option value="d003">d003</option>
+        <option value="d004">d004</option>
+        <option value="d005">d005</option>
+        <option value="d006">d006</option>
+        <option value="d007">d007</option>
+      </select>
+      <div *ngIf="departmentSelect.invalid && (departmentSelect.dirty || departmentSelect.touched)" class="error-message">
+        Department is required.
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate" [(ngModel)]="fromDate" name="fromDate" required #fromDateInput="ngModel">
+      <div *ngIf="fromDateInput.invalid && (fromDateInput.dirty || fromDateInput.touched)" class="error-message">
+        From Date is required.
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="toDate">To Date:</label>
+      <input type="date" id="toDate" [(ngModel)]="toDate" name="toDate" required #toDateInput="ngModel">
+      <div *ngIf="toDateInput.invalid && (toDateInput.dirty || toDateInput.touched)" class="error-message">
+        To Date is required.
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn" [disabled]="deptEmpForm.invalid">Assign Department</button>
+  </form>
+</div>
+</body>

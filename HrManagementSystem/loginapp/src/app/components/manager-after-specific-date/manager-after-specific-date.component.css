@@ -1,0 +1,248 @@
+.form-control{
+
+    width: 40%;
+
+    /* padding-bottom: px; */
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+.designations-button {
+
+    display: block;
+
+    width: 25%;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    background-color: #173a60;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+  }
+
+ 
+
+  .designations-button:hover {
+
+    background-color: #3d454e;
+
+  }
+
+ 
+
+
+
+
+
+  .container {
+
+    width: 100%;
+
+    margin: 20px;
+
+  }
+
+ 
+
+  h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+  }
+
+ 
+
+  .button {
+
+    padding: 10px 20px;
+
+    background-color: #4caf50;
+
+    color: #ffffff;
+
+    border: none;
+
+    cursor: pointer;
+
+  }
+
+  .btn{
+
+    background-color: #a1796e;
+
+  }
+
+  .table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+  }
+
+ 
+
+  .table th,
+
+  .table td {
+
+    padding: 10px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+
+  }
+
+ 
+
+  .table th {
+
+    background-color: #f2f2f2;
+
+  }
+
+ 
+
+  .table tr:last-child td {
+
+    border-bottom: none;
+
+  }
+
+ 
+
+  /* for card styling */
+
+  .card-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    /* height: 100vh; */
+
+    margin-top: 10px;
+
+  }
+
+ 
+
+  .card {
+
+    width: 800px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    background: transparent;
+
+  }
+
+ 
+
+  h2 {
+
+    margin-bottom: 10px;
+
+  }
+
+ 
+
+  .button {
+
+    margin-bottom: 15px;
+
+    background-color: rgb(165, 122, 122);
+
+    width: 30%;
+
+    /* color: gray; */
+
+    height: 35px;
+
+    border-radius: 6px;
+
+   
+
+  }
+
+ 
+
+  .department-table {
+
+    width: 100%;
+
+  }
+
+ 
+
+  .department-table th,
+
+  .department-table td {
+
+    padding: 8px;
+
+    text-align: center;
+
+  }
+
+ 
+
+  .department-table th {
+
+    background-color: #f2f2f2;
+
+    font-weight: bold;
+
+  }
+
+ 
+
+  .department-table tbody tr:nth-child(even) {
+
+    background-color: #f2f2f2;
+
+  }
+
+
+
+
+
+  body {
+
+    background-image: url("src/assets/bg11.jpg");
+
+    /* background-color: rgba(0, 0, 0, 0.5); Adjust the alpha value (0.5 in this example) to control the transparency */
+
+    background-blend-mode: multiply; /* This blending mode helps to blend the image and the background color */
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+
+  }

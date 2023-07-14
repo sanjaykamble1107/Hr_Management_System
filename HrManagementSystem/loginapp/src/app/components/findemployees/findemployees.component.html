@@ -1,0 +1,110 @@
+<body>
+  <div class="text-center" style="background-color: transparent;">
+  <h1 style="font-size: 50px;">List of Employees</h1>
+  </div>
+<div class="text-center" style="background-color: transparent;">
+  <button type="button" class="btn btn-light" (click)="getallemployees()">getAllEmployees</button>
+  <button type="button" class="btn btn-light" (click)="getEmployeesJoinedLastYears(10)">Last 10 Years</button>
+  <button type="button" class="btn btn-light" (click)="getEmployeesJoinedLastYears(5)">Last 5 Years</button>
+  <button type="button" class="btn btn-light" (click)="getEmployeesJoinedLastYears(15)">Last 15 Years</button>
+  <button type="button" class="btn btn-light" (click)="getEmployeesJoinedLastYears(20)">Last 20 Years</button>
+  <button type="button" class="btn btn-light" (click)="getEmployeesJoinedLastYears(25)">Last 25 Years</button>
+  <button type="button" class="btn btn-light" (click)="getEmployeesJoinedLastYears(30)">Last 30 Years</button>
+</div>
+
+<div class="container container-sm" style="background-color: transparent;">
+  <table class="table table-bordered" style="background-color: transparent;">
+    <thead >
+      <tr>
+        <th>employeeNo</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>JoinDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees | paginate:{itemsPerPage:10, currentPage:pagination}">
+        <td>{{ employee.employeeNumber || employee.empNo }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.hireDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="previousPage()" [disabled]="page === 0" class="btn btn-primary">Previous</button>
+  <button (click)="nextPage()" [disabled]="isLastPage" class="btn btn-primary">Next</button>
+  <div class="pagination-container text-center">
+    <pagination-controls (pageChange)="pagination = $event"></pagination-controls>
+  </div>
+</div>
+
+<div class="container-md p-3 border border-secondary border-start-0 rounded-end rounded-start" style="background-color: transparent;">
+  <h1>Count of Employees Joined in the Last 10 Years</h1>
+  <button type="button" class="btn btn-outline-dark" (click)="getCount()">Get Count</button>
+  <p class="count-text" style="margin-top: 20px;">Count: {{ count }}</p>
+</div>
+<div>
+<div class="container container-sm" style="background-color: transparent;">
+  <div class="container text-center">
+    <h1>List of Employees Joined After 2005</h1>
+    <button type="button" class="btn btn-outline-dark" (click)="getEmployeesJoinedAfter2005()">Get Employees Joined
+      After 2005</button>
+    <table class="table table-bordered table-striped" style="background-color: transparent;">
+      <thead class="table-dark">
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employeesJoinedAfter2005">
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="container-md p-3 border border-secondary border-start-0 rounded-end rounded-start" style="background-color: transparent;">
+  <h1>Count of Employees Joined After 2005</h1>
+  <button type="button" class="btn btn-outline-dark" (click)="getCountEmployeesJoinedAfter2005()">Get Count Employees
+    Joined After 2005</button>
+  <p class="count-text">Count: {{ countEmployeesJoinedAfter2005 }}</p>
+</div>
+
+<div class="container-md p-3 border border-secondary border-start-0 rounded-end rounded-start" style="background-color: transparent;">
+  <h1>Count of Women Employees</h1>
+  <button type="button" class="btn btn-outline-dark" (click)="getCountWomenEmployees()">Get Count Women
+    Employees</button>
+  <p class="count-text">Count: {{ countWomenEmployees }}</p>
+</div>
+<div class="container container-sm" style="background-color: transparent;">
+  <div class="container text-center">
+    <h1>List of Women Employees</h1>
+    <button type="button" class="btn btn-outline-dark" (click)="getWomenEmployees()">Get Women Employees</button>
+    <table class="table table-striped table-bordered container container-xl mt-3" style="background-color: transparent;">
+      <thead class="table-dark">
+        <tr>
+          <th>Emp ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>BirthDate</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Womenemp of womenemp">
+          <td>{{ Womenemp.empNo }}</td>
+          <td>{{ Womenemp.firstName }}</td>
+          <td>{{ Womenemp.lastName }}</td>
+          <td>{{ Womenemp.birthDate }}</td>
+          <td>{{ Womenemp.gender }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="previousWomenPage()" [disabled]="page === 1" class="btn btn-primary">Previous</button>
+    <button (click)="nextWomwenPage()" [disabled]="isLastPage" class="btn btn-primary">Next</button>
+  </div>
+</div>
+</div>
+</body>

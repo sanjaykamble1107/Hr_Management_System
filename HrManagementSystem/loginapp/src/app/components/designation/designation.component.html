@@ -1,0 +1,21 @@
+<body>
+
+  <div class="card-container">
+
+    <h1>Employee Designations</h1>
+
+   
+
+    <button class="designations-button" (click)="getEmployeeDesignations()">Get Employee Designations</button>
+
+   
+
+    <ul class="designation-list" *ngFor="let data of designations">
+
+      <li>{{ data }}</li>
+
+    </ul>
+
+  </div>
+
+</body>

@@ -1,0 +1,36 @@
+<body>
+  <div class="container">
+    <h2>Assign Manager to Department</h2>
+    <form (ngSubmit)="assignManager()" #managerForm="ngForm">
+      <div class="form-group">
+        <label for="empNo">Employee Number</label>
+        <input type="number" class="form-control" id="empNo" name="empNo" [(ngModel)]="empNo" required>
+        <div *ngIf="managerForm.controls['empNo'].invalid && (managerForm.controls['empNo'].dirty || managerForm.controls['empNo'].touched)" class="error-message">
+          Employee Number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="deptNo">Department Number</label>
+        <input type="text" class="form-control" id="deptNo" name="deptNo" [(ngModel)]="deptNo" required>
+        <div *ngIf="managerForm.controls['deptNo'].invalid && (managerForm.controls['deptNo'].dirty || managerForm.controls['deptNo'].touched)" class="error-message">
+          Department Number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fromDate">From Date</label>
+        <input type="date" class="form-control" id="fromDate" name="fromDate" [(ngModel)]="fromDate" required>
+        <div *ngIf="managerForm.controls['fromDate'].invalid && (managerForm.controls['fromDate'].dirty || managerForm.controls['fromDate'].touched)" class="error-message">
+          From Date is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="toDate">To Date</label>
+        <input type="date" class="form-control" id="toDate" name="toDate" [(ngModel)]="toDate" required>
+        <div *ngIf="managerForm.controls['toDate'].invalid && (managerForm.controls['toDate'].dirty || managerForm.controls['toDate'].touched)" class="error-message">
+          To Date is required.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!managerForm.valid">Assign Manager</button>
+    </form>
+  </div>
+</body>

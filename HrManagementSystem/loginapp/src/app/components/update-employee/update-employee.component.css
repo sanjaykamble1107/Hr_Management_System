@@ -1,0 +1,67 @@
+/* body{
+    background-image: url("src\assets\bg9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+  } */
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('src\assets\bg9.jpg'); 
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(15, 8, 8, 0.306);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .checkbox-group {
+    display: flex;
+  }
+
+  .checkbox-group label {
+    margin-right: 10px;
+  }
+
+  .submit-btn {
+    margin-top: 50px;
+    width: 50%;
+  }
+  .mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: #403f41a6;
+    --mdc-protected-button-label-text-color: #fff;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
